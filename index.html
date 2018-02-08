@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Is Fun!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/main.css">
+
+</head>
+
+<body>
+
+
+    <div class="container-flex pd-1rem bg-image-centered h-400px" id="top-container-search">
+        <div class="row h-400px centerFlex">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col centerFlex m-1rem centered-text">
+                        <h class="display-3 searchbox-headline-text"> Find your music </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 centerFlex">
+                        <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
+                            <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                                <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-gradient-img">
+        <div class="row justify-content-center" id="songs">
+            <!--SONGS ADDED DYNAMICALLY HERE-->
+            <!-- https://placeimg.com/200/200/people/sepia  ${currentSong.albumArt}  -->
+            <!-- <div class="card" style="width:22rem">
+                <img class="card-img-top" src=${currentSong.albumArt} alt="Album Art">
+                <div class="card-body">
+                    <h5 class="card-title">${currentSong.title}</h5>
+                    <h6 class="card-title">${currentSong.artist}</h6>
+                    <p class="card-text">${currentSong.price}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <audio controls id="id${currentSong.trackId}">
+                            <source src="${currentSong.preview}" type="audio/ogg">
+                        </audio>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+        
+                <!-- FOOTER -->
+
+
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+        <script src="itunes-service.js"></script>
+        <script src="itunes-controller.js"></script>
+        <script src="app.js"></script>
+</body>
+
+</html>
